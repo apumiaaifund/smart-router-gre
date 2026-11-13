@@ -1,0 +1,1 @@
+{"id":"chatcmpl-live-e4e987b91726","object":"chat.completion","created":1794228069,"model":"qwen2.5-7b-cpu","choices":[{"index":0,"message":{"role":"assistant","content":"[Echo response from qwen2.5-7b-cpu]: Счёт [ACCOUNT], проверь"},"finish_reason":"stop"}]}

@@ -1,0 +1,1 @@
+{"id":"chatcmpl-live-1333350e8429","object":"chat.completion","created":1794207230,"model":"qwen3-32b","choices":[{"index":0,"message":{"role":"assistant","content":"[Echo response from qwen3-32b]: Паспорт [PASSPORT], телефон [PHONE], email [EMAIL]"},"finish_reason":"stop"}]}

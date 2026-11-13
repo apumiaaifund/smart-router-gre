@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Smart Router + GRE — слайды</title>
+<style>
+  html, body { margin:0; padding:0; height:100%; background:#0f1115; color:#e0e0e0;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; overflow:hidden; }
+  .slide { display:none; height:100vh; box-sizing:border-box; padding:6vh 8vw;
+    flex-direction:column; justify-content:center; }
+  .slide.active { display:flex; }
+  h1 { color:#d4af37; font-size:56px; margin:0 0 10px; line-height:1.1; }
+  h2 { color:#d4af37; font-size:40px; margin:0 0 30px; }
+  h3 { color:#fff; font-size:26px; margin:0 0 12px; }
+  p  { font-size:22px; line-height:1.5; color:#ccc; margin:8px 0; }
+  .sub { color:#888; font-size:24px; }
+  .kicker { color:#00e5ff; font-size:18px; letter-spacing:2px; text-transform:uppercase; margin-bottom:14px; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:20px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:20px; }
+  .card { background:#1a1d24; border-radius:14px; padding:28px; border-left:5px solid #d4af37; }
+  .card.blue { border-left-color:#00e5ff; }
+  .card.green { border-left-color:#00ff88; }
+  .card.red { border-left-color:#ff5555; }
+  .big { font-size:64px; color:#00ff88; font-weight:700; line-height:1; }
+  .big.blue { color:#00e5ff; }
+  .label { color:#888; font-size:16px; text-transform:uppercase; letter-spacing:1px; margin-top:8px; }
+  table { width:100%; border-collapse:collapse; margin-top:20px; font-size:24px; }
+  th, td { padding:16px 12px; text-align:left; border-bottom:1px solid #333; }
+  th { color:#888; font-weight:400; font-size:16px; text-transform:uppercase; letter-spacing:1px; }
+  .price { color:#00ff88; font-weight:700; }
+  .next { display:flex; gap:20px; margin-top:30px; flex-wrap:wrap; }
+  .step { flex:1; min-width:220px; background:#1a1d24; border-radius:14px; padding:24px; border-top:4px solid #d4af37; }
+  .step .n { color:#d4af37; font-size:16px; letter-spacing:2px; text-transform:uppercase; }
+  .nav { position:fixed; bottom:18px; right:24px; color:#444; font-size:14px; }
+  .logo { position:fixed; top:22px; left:28px; height:48px; opacity:.9; }
+</style>
+</head>
+<body>
+<img class="logo" src="logo.png" alt="">
+<section class="slide active">
+  <div class="kicker">Для Заказчик · 2026</div>
+  <h1>Smart Router + GRE</h1>
+  <p class="sub">Локальный роутинг по моделям и защита PII — на вашей инфраструктуре</p>
+</section>
+<section class="slide">
+  <h2>Проблема → Решение</h2>
+  <div class="grid2">
+    <div class="card red"><h3>Что болит</h3><p>• Чувствительные данные уходят в облако</p><p>• Дорогие модели тратятся на приветствия</p><p>• Нет контроля: что, куда и почему ушло</p><p>• Сбои GPU останавливают сервис</p></div>
+    <div class="card green"><h3>Что сделали</h3><p>• GRE: PII-маскирование до отправки</p><p>• Smart Router: 3 оси выбора модели</p><p>• Audit: каждое решение записано</p><p>• Fallback: GPU → CPU без простоя</p></div>
+  </div>
+</section>
+<section class="slide">
+  <h2>Как работает: 3 оси</h2>
+  <div class="grid3">
+    <div class="card blue"><h3>Безопасность</h3><p>Чувствительное → CPU qwen2.5-7b-cpu</p><p>Инъекции → BLOCKED</p></div>
+    <div class="card green"><h3>Стоимость</h3><p>Бюджет &lt; 20% → дешёвая модель</p><p>Cost Guard</p></div>
+    <div class="card"><h3>Отказоустойчивость</h3><p>502 → fallback на CPU</p><p>Обычное → GPU qwen3-32b</p></div>
+  </div>
+</section>
+<section class="slide">
+  <h2>GRE: анализ запросов + PII</h2>
+  <div class="grid3">
+    <div class="card green"><div class="big">11.7%</div><div class="label">экономии токенов · 12.7% шума · 5.1% дублей</div></div>
+    <div class="card blue"><div class="big blue">34</div><div class="label">PII-маски в демо</div></div>
+    <div class="card"><div class="big">79</div><div class="label">запросов в демо</div></div>
+  </div>
+  <p style="margin-top:30px;">Паспорт, СНИЛС, телефон, email — не уходят в модель. Приветствия и дубли — отсекаются.</p>
+</section>
+<section class="slide">
+  <h2>Доказательства</h2>
+  <div class="grid3">
+    <div class="card"><div class="big">96</div><div class="label">unit Router</div></div>
+    <div class="card"><div class="big">16/16</div><div class="label">HTTP</div></div>
+    <div class="card"><div class="big">49</div><div class="label">PII Shield + Entity Guard</div></div>
+    <div class="card"><div class="big">14/14</div><div class="label">evals</div></div>
+    <div class="card"><div class="big">OK</div><div class="label">external: bandit, detect-secrets, mypy, pip-audit 3.11</div></div>
+    <div class="card"><div class="big">OK</div><div class="label">7 advisory starlette приняты до 2026-12-05</div></div>
+  </div>
+</section>
+<section class="slide">
+  <h2>Цена</h2>
+  <table>
+    <tr><th>Этап</th><th>Стоимость</th></tr>
+    <tr><td>Пилот (4–6 недель)</td><td class="price">480 000 – 600 000 ₽</td></tr>
+    <tr><td>Промышленный контур</td><td class="price">900 000 – 1 200 000 ₽</td></tr>
+    <tr><td>Сопровождение</td><td>от 140 000 ₽/мес</td></tr>
+  </table>
+</section>
+<section class="slide">
+  <h2>Следующий шаг</h2>
+  <div class="next">
+    <div class="step"><div class="n">01</div><h3>NDA</h3><p>Подписываем, передаём комплект</p></div>
+    <div class="step"><div class="n">02</div><h3>Пилот 4–6 недель</h3><p>self_audit на ваших логах, route под ваши модели</p></div>
+    <div class="step"><div class="n">03</div><h3>Приёмка</h3><p>Экономия ≥ X%, 0 PII-утечек</p></div>
+  </div>
+  <p class="sub" style="margin-top:40px;">Готовы начать с NDA и пилота на ваших данных.</p>
+</section>
+<div class="nav">← → / пробел · слайд <span id="cur">1</span>/7</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const cur = document.getElementById('cur');
+  let i = 0;
+  function show(n) {
+    slides[i].classList.remove('active');
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add('active');
+    cur.textContent = i + 1;
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); show(i + 1); }
+    if (e.key === 'ArrowLeft'  || e.key === 'PageUp')  { e.preventDefault(); show(i - 1); }
+    if (e.key === 'Home') show(0);
+    if (e.key === 'End')  show(slides.length - 1);
+  });
+</script>
+</body>
+</html>
