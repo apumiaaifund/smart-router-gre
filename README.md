@@ -1,5 +1,19 @@
 # Smart Router + GRE 2.0 — Public Demo
 
+## За 30 секунд
+
+**Что это:** Smart Router + GRE 2.0: air-gapped LLM router + PII shield. Маршрутизирует запросы по типу данных, sensitive → локально.
+
+**Кому:** Обороны, госсектор, regulated industries — LLM без облака.
+
+**Что доказано:** 145 тестов (49 gre + 96 router).
+
+**Чего не доказано (честно):** Нет production-развёртывания.
+
+---
+
+
+
 On-Premise, Air-Gapped шлюз для оптимизации LLM-инфраструктуры.
 **Demo materials only.** Full source code — available on purchase.
 
