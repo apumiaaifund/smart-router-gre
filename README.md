@@ -1,5 +1,8 @@
 # Smart Router + GRE 2.0 — Public Demo
 
+<p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
+
+
 ## За 30 секунд
 
 **Что это:** Smart Router + GRE 2.0: air-gapped LLM router + PII shield. Маршрутизирует запросы по типу данных, sensitive → локально.
