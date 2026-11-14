@@ -42,3 +42,9 @@ On-Premise, Air-Gapped шлюз для оптимизации LLM-инфраст
 
 Available on purchase. Private repository + ZIP.
 Contact: apumiaaifund@gmail.com
+
+## Data integrity
+
+**No synthetic data in production.** All external sources documented in `sources.yaml` (Private repo) with official URLs, real dates, status. Demo marked `_synthetic: true`.
+
+**Никакой синтетики в продакшене.** Все источники — в `sources.yaml` с официальными URL и реальными датами.
