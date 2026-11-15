@@ -1,26 +1,40 @@
-![PROVEN](https://img.shields.io/badge/PROVEN-145%20passed-brightgreen)
-
-
 <p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
 
-<p align="center">
-  <img src="docs/logo.png" alt="smart-router-gre-demo" width="200"/>
-</p>
+![PROVEN](https://img.shields.io/badge/PROVEN-145%20passed-brightgreen)
 
-<h1 align="center">smart-router-gre-demo</h1>
+# Smart Router + GRE 2.0
 
-<p align="center">
-  <b>Public demo / archive: APUM AI Fund — воспроизводимая финансовая аналитика</b><br/>
-  APUM AI Fund — воспроизводимая финансовая аналитика
-</p>
+**Air-gapped LLM router + PII shield. Маршрутизирует по типу данных, sensitive → локально.**
 
-## О продукте
-Архивный демо-проект APUM AI Fund. См. основные флагманские продукты в профиле организации.
+---
 
-## Выгоды
-Изучение истории разработки и эволюции архитектуры APUMIA.
+## За 30 секунд
 
+**Что это:** Air-gapped LLM router + PII shield. Маршрутизирует запросы по типу данных: sensitive → локальная модель, публичное → GPU.
 
-## Связанные продукты
-Этот репозиторий является частью экосистемы [APUM AI Fund](https://github.com/apumiaaifund).
-Флагманский продукт: [apumia_credit](https://github.com/apumiaaifund/apumia_credit) (PROVEN 8/8).
+**Кому:** Обороны, госсектор, regulated industries — LLM без облака.
+
+**Почему сейчас:** Нельзя отправить «СНИЛС + диагноз» в OpenAI. Smart Router держит sensitive-данные локально, публичные — в GPU.
+
+**Что доказано:** 145 passed (49 gre + 96 router). apumia prove → PROVEN.
+
+**Чего не доказано (честно):** Нет production-развёртывания. Integration-тесты требуют live gateway (router/test_suite.py — исключены из unit-прогона).
+
+---
+
+## Оффер
+
+По запросу.
+
+**Следующий шаг:** Покажу маршрутизацию на живом примере — 20 минут.
+
+---
+
+## GitHub
+
+- **Private code:** apumiaaifund/smart-router-gre
+- **Public demo:** apumiaaifund/smart-router-gre-demo
+
+## License
+
+MIT
