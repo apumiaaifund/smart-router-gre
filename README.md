@@ -1,3 +1,5 @@
+[![CI Verification](https://github.com/apumiaaifund/smart-router-gre-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/apumiaaifund/smart-router-gre-demo/actions/workflows/ci.yml)
+
 <p align="center"><img src="assets/logo.svg" alt="logo" width="400"></p>
 
 ![PROVEN](https://img.shields.io/badge/PROVEN-145%20passed-brightgreen)
