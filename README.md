@@ -60,3 +60,6 @@ MIT
 > **Контроль архитектуры (`Apumia Blueprint`):** `CLEAN` (`0` циклических зависимостей, контроль сложности McCabe)  
 > **Анализ безопасности (`Bandit / Zero-Trust`):** `0` критических уязвимостей  
 > **Протокол достоверности (`Apumia Hub`):** `_synthetic: false` | `preservation: 100.0%` | `verified: true`
+
+## Commercial Source Code & Private Repo Access
+Instant read-only GitHub repository provisioning via Stripe, Apple Pay, or PayPal: **[Buy APUMIA Smart Router GRE ($149) ↗](https://app.lava.top/products/c80d7748-a7af-4a52-9fa0-b2477c654e83)**
